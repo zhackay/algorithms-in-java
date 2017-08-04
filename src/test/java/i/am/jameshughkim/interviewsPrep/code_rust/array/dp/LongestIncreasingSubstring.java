@@ -1,7 +1,10 @@
 package i.am.jameshughkim.interviewsPrep.code_rust.array.dp;
 
 public class LongestIncreasingSubstring {
-    public int getLongestIncreasingSubstring(int[] a) {
+
+
+
+    public int getLongestIncreasingSubstring2(int[] a) {
         int n = a.length;
         int[] lis = new int[n];
 
