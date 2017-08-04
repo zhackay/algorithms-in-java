@@ -3,18 +3,12 @@ package cheat.dp;
 public class Fibonacci {
     private int[] dp;
 
-    public int fib(int n) {
-        dp = new int[n];
-
-        return fib_td(n);
-    }
-
     // 두가지 예외 F(0) = 0, F(1) = 1
     // Top Down
-    int fib_td(int n) {
+    int fib(int n) {
         if (n <= 1) return n;
 
-        dp[n] = fib_td(n-1) + fib_td(n-2);
+        dp[n] = fib(n-1) + fib(n-2);
         return dp[n];
     }
 
@@ -29,4 +23,15 @@ public class Fibonacci {
         }
         return dp[n];
     }
+
+    /**
+     * WRAPPER
+     */
+
+    public int getFib(int n) {
+        dp = new int[n];
+
+        return fib(n);
+    }
+
 }
