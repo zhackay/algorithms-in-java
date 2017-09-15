@@ -36,40 +36,5 @@ public class TelephoneNumber {
         }
     }
 
-    @Test
-    void printTelephoneWordsTest(){
-        printTelephoneWords("4954552");
-    }
 
-    /* https://stackoverflow.com/questions/2344496/how-can-i-print-out-all-possible-letter-combinations-a-given-phone-number-can-re
-    */
-    public List<String> letterCombinations(String digits) {
-        List<String> res = new ArrayList<>();
-        List<String> pre = new ArrayList<>();
-        res.add("");
-
-        for(int i=0;i<digits.length();i++){
-            String letters;
-            for(String str: res) {
-                letters = map.get(digits.charAt(i));
-                for (int j = 0; j < letters.length(); j++)
-                    pre.add(str + letters.charAt(j));
-            }
-            res = pre;
-            pre = new ArrayList<String>();
-        }
-        return res;
-    }
-
-    static final HashMap<Character,String> map = new HashMap<Character,String>(){{
-        //put('1',"1");
-        put('2',"abc");
-        put('3',"def");
-        put('4',"ghi");
-        put('5',"jkl");
-        put('6',"mno");
-        put('7',"pqrs");
-        put('8',"tuv");
-        put('9',"wxyz");
-    }} ;
 }

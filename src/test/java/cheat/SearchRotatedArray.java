@@ -40,7 +40,7 @@ public class SearchRotatedArray {
     }
 
     /*************
-     * Wrapper
+     * Wrapper+-
      *************/
 
     static int searchRotatedArray(int[] a, int k) {
